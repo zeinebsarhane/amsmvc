@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sip</groupId>
-	<artifactId>amsMVC</artifactId>
+	<artifactId>amsMVC-gitHub</artifactId>
 	<version>1.0-SNAPSHOT-MVC</version>
 	<packaging>war</packaging>
 	<name>amsMVC</name>
@@ -47,11 +47,11 @@
 			</exclusions>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-tomcat</artifactId> -->
+<!-- 			<scope>provided</scope> -->
+<!-- 		</dependency> -->
 		
 	</dependencies>
 

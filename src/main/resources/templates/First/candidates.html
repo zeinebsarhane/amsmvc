@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>	
+	<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}"/>
+</head>
+
+<body>
+
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+Pour ajouter cliquer 
+<a th:href="@{/first/add}" class = "btn btn-primary">ici</a>
+
+<h2>liste des candidats</h2>
+
+<div th:if="${cs}">
+
+	<!-- <h1>liste des candidats</h1> -->
+	<table border="1">
+		<tr>
+			<th>Nom</th><th>Prenom</th><th>Email</th>
+		</tr>
+	
+		<tr th:each="c : ${cs}">
+				
+			<td th:text="${c.getNom()}"></td>
+			<td th:text="${c.getPrenom()}"></td>
+			<td th:text="${c.getEmail()}"></td>
+			
+		</tr>
+	</table>
+</div>
+
+<div th:unless="${cs}">
+	<span th:text="'Pas de candidats'"></span>
+</div>
+
+
+
+
+
+
+</body>
+
+</html>
